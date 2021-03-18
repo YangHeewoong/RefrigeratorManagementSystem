@@ -22,7 +22,7 @@ public class MenuManager {
 			switch(num) 
 			{
 			case 1 :
-				System.out.print("Type of Food : ");
+				System.out.print("Type of Food : "); 
 				String Food_Type = input.next();
 				
 				System.out.print("Number of Food : ");
@@ -31,12 +31,11 @@ public class MenuManager {
 				System.out.print("Shelf life : ");
 				String Shelf_life = input.next();
 				
-				System.out.print("Storage Place : "); //띄어쓰기 X, 띄어쓰기 할시 오류O
+				System.out.print("Storage Place : "); 
 				String Storage_Place = input.next();
 				break;
 				
-			case 2 :
-				System.out.print("");
+			case 2 :				
 				
 			case 3 :
 				
