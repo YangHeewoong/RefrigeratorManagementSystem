@@ -23,26 +23,44 @@ public class MenuManager {
 			{
 			case 1 :
 				System.out.print("Type of Food : "); 
-				String Food_Type = input.next();
+				String Food = input.next();
 				
 				System.out.print("Number of Food : ");
-				int Number_of_Food = input.nextInt();
+				int Number = input.nextInt();
 				
 				System.out.print("Shelf life : ");
-				String Shelf_life = input.next();
+				String Shelflife = input.next();
 				
 				System.out.print("Storage Place : "); 
-				String Storage_Place = input.next();
+				String Storage = input.next();
 				break;
 				
 			case 2 :				
+				System.out.println("Input what you want to delete food type");
 				
+				System.out.print("Type of Food : ");
+				String Delete_Food = input.next();
+				break;
+			
 			case 3 :
+				System.out.println("Input what you want to Edit");
+				
+				System.out.print("Type of Food  : "); 
+				String Edit_Food = input.next();
+				
+				System.out.print("Number of Food : ");
+				int Edit_Number = input.nextInt();
+				
+				System.out.print("Shelf life : ");
+				String Edit_Shelflife = input.next();
+				
+				System.out.print("Storage Place : "); 
+				String Edit_Storage = input.next();
+				break;
+				
 				
 			case 4 :
-				System.out.print("Type of Food : ");
-				String View_Food = input.next();
-				break;
+				
 			case 5 :	
 			
 			}
