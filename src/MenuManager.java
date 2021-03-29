@@ -22,42 +22,16 @@ public class MenuManager {
 			switch(num) 
 			{
 			case 1 :
-				System.out.print("Type of Food : "); 
-				String Food = input.next();
-				
-				System.out.print("Number of Food : ");
-				int Number = input.nextInt();
-				
-				System.out.print("Shelf life : ");
-				String Shelflife = input.next();
-				
-				System.out.print("Storage Place : "); 
-				String Storage = input.next();
+				addFood();
 				break;
 				
 			case 2 :				
-				System.out.println("Input what you want to delete food type");
-				
-				System.out.print("Type of Food : ");
-				String Delete_Food = input.next();
+				deleteFood();
 				break;
 			
 			case 3 :
-				System.out.println("Input what you want to Edit");
-				
-				System.out.print("Type of Food  : "); 
-				String Edit_Food = input.next();
-				
-				System.out.print("Number of Food : ");
-				int Edit_Number = input.nextInt();
-				
-				System.out.print("Shelf life : ");
-				String Edit_Shelflife = input.next();
-				
-				System.out.print("Storage Place : "); 
-				String Edit_Storage = input.next();
+				editFood();
 				break;
-				
 				
 			case 4 :
 				
@@ -66,6 +40,43 @@ public class MenuManager {
 			}
 													
 		}
+	}
+	public static void addFood() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Type of Food : "); 
+		String Food = input.next();
+		
+		System.out.print("Number of Food : ");
+		int Number = input.nextInt();
+		
+		System.out.print("Shelf life : ");
+		String Shelflife = input.next();
+		
+		System.out.print("Storage Place : "); 
+		String Storage = input.next();
+	}
+	public static void deleteFood() {
+		System.out.println("Input what you want to delete food type");
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Type of Food : ");
+		String Delete_Food = input.next();
+	}
+	public static void editFood() {
+		System.out.println("Input what you want to Edit");
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Type of Food  : "); 
+		String Edit_Food = input.next();
+		
+		System.out.print("Number of Food : ");
+		int Edit_Number = input.nextInt();
+		
+		System.out.print("Shelf life : ");
+		String Edit_Shelflife = input.next();
+		
+		System.out.print("Storage Place : "); 
+		String Edit_Storage = input.next();
 	}
 
 }
