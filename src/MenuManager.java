@@ -9,11 +9,11 @@ public class MenuManager {
 		
 		int num = 0;
 			while (num != 5) {
-			System.out.println("<Refrigerator Management System Menu>");
+			System.out.println("\n<Refrigerator Management System Menu>");
 			System.out.println("1. Add Food");
 			System.out.println("2. Delete Food");
 			System.out.println("3. Edit Food");
-			System.out.println("4. View Food");
+			System.out.println("4. View Foods");
 			System.out.println("5. Exit");
 			System.out.println("Select one number between 1-5");
 			
