@@ -1,12 +1,15 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import Food.Beberage;
+import Food.FoodType;
 import Food.Meat;
 import Food.Refrigerator;
+import Food.Spice;
 
 public class RefrigeratorManager {
 	ArrayList<Refrigerator> refrigerators = new ArrayList<Refrigerator>();
-	Scanner input;
+	Scanner input; 
 	
 	RefrigeratorManager(Scanner input) {
 		this.input = input;
@@ -25,37 +28,37 @@ public class RefrigeratorManager {
 			System.out.print("\n Select num for FoodType between 1~6 : ");
 			type = input.nextInt();
 			if (type == 1) {
-				refrigerator = new Refrigerator();
+				refrigerator = new Refrigerator(FoodType.Fruit);
 				refrigerator.getUserInput(input);
 				refrigerators.add(refrigerator);
 				break;
 			}
 			else if (type == 2) {
-				refrigerator = new Refrigerator();
+				refrigerator = new Refrigerator(FoodType.Vegetable);
 				refrigerator.getUserInput(input);
 				refrigerators.add(refrigerator);
 				break;
 			}
 			else if (type == 3) {
-				refrigerator = new Meat();
+				refrigerator = new Meat(FoodType.Meat);
 				refrigerator.getUserInput(input);
 				refrigerators.add(refrigerator);
 				break;
 			}
 			else if (type == 4) {
-				refrigerator = new Refrigerator();
+				refrigerator = new Refrigerator(FoodType.SeaFood);
 				refrigerator.getUserInput(input);
 				refrigerators.add(refrigerator);
 				break;
 			}
 			else if (type == 5) {
-				refrigerator = new Refrigerator();
+				refrigerator = new Beberage(FoodType.Beberage);
 				refrigerator.getUserInput(input);
 				refrigerators.add(refrigerator);
 				break;
 			}
 			else if (type == 6) {
-				refrigerator = new Refrigerator();
+				refrigerator = new Spice(FoodType.Spice);
 				refrigerator.getUserInput(input);
 				refrigerators.add(refrigerator);
 				break;
@@ -65,8 +68,6 @@ public class RefrigeratorManager {
 			}
 		}	
 				
-
-		
 		System.out.println("Food is sucessfully registered!");
 	}
 	

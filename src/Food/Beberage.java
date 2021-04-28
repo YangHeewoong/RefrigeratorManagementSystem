@@ -2,20 +2,27 @@ package Food;
 
 import java.util.Scanner;
 
-public class Meat extends Refrigerator { //Meat 갯수 대신 무게(단위 :g) 저장
+public class Beberage extends Refrigerator { //음료의 용량(단위 :ml, L)추가
 	
-	public Meat(FoodType type) {
+	protected String capacity;
+	
+	public Beberage(FoodType type) {
 		super(type);
 	}
 	
 	public void getUserInput(Scanner input) {
-		System.out.print("Food Name : "); 
+		
+		System.out.print("Beberage Name : "); 
 		String Food = input.next();
 		this.setFood(Food);
 		
-		System.out.print("Weight of Food(g): ");
+		System.out.print("Number of Beverage : ");
 		int number = input.nextInt();
 		this.setNumber(number);
+		
+		System.out.print("Capacity : ");
+		String Capacity = input.next();
+		this.setCapacity(Capacity);
 		
 		System.out.print("Shelf life : ");
 		String Shelflife = input.next();
@@ -24,8 +31,8 @@ public class Meat extends Refrigerator { //Meat 갯수 대신 무게(단위 :g) 저장
 		System.out.print("Storage Place : "); 
 		String Storage = input.next();
 		this.setStorage(Storage);		
+		
 	}
-	
 	
 	public void printinfo() {
 		String ftype = "none";
@@ -53,8 +60,9 @@ public class Meat extends Refrigerator { //Meat 갯수 대신 무게(단위 :g) 저장
 		
 		System.out.println("Type : " + ftype + "\n" +
 				           "Food :" + this.Food+ "\n" + 
-						   "Weight(g) : " + this.number + "\n" +  // In Meat class, Using weight instead of number
-				           "Shelflife : " + this.Shelflife + "\n" +
+						   "number : " + this.number + "\n" +
+				           "Capacity : " + this.Capacity + "\n" +
+						   "Shelflife : " + this.Shelflife + "\n" +
 			 	           "Storage : " + this.Storage + "\n");
 	}
 }

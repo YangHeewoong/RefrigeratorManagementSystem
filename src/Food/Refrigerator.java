@@ -9,19 +9,34 @@ public class Refrigerator {
 	protected int number;
 	protected String Shelflife;
 	protected String Storage;
+	protected String Capacity;
 	
 	public Refrigerator() {
+	}
+	
+	public Refrigerator(FoodType type) {
+		this.type = type;
 	}
 	
 	public Refrigerator(String Food) {
 		this.Food = Food;
 	}
 	
-	public Refrigerator(String Food, int number, String Shelflife, String Storage) {
+	public Refrigerator(FoodType type, String Food, int number, String Shelflife, String Storage) {
+		this.type = type;
 		this.Food = Food;
 		this.number = number;
 		this.Shelflife = Shelflife;
 		this.Storage = Storage;
+	}
+	
+	public Refrigerator(FoodType type, String Food, int number, String Shelflife, String Storage, String Capacity) {
+		this.type = type;
+		this.Food = Food;
+		this.number = number;
+		this.Shelflife = Shelflife;
+		this.Storage = Storage;
+		this.Capacity = Capacity;
 	}
 	
 	public FoodType getType() {
@@ -64,12 +79,14 @@ public class Refrigerator {
 		Storage = storage;
 	}
 	
-	public void printinfo() {
-		System.out.println("\nFood :" + this.Food+ "\n" + 
-						   "number : " + this.number + "\n" +
-				           "Shelflife : " + this.Shelflife + "\n" +
-			 	           "Storage : " + this.Storage);
+	public String getCapacity() {
+		return Capacity;
 	}
+	
+	public void setCapacity(String capacity) {
+		Capacity = capacity;
+	}	
+	
 	public void getUserInput(Scanner input) {
 		System.out.print("Food Name : "); 
 		String Food = input.next();
@@ -89,4 +106,34 @@ public class Refrigerator {
 		
 	}
 	
+	public void printinfo() {
+		String ftype = "none";
+		switch (this.type) {
+		case Fruit :
+			ftype = "Fruit";
+			break;
+		case Vegetable :
+			ftype = "Vegetable";
+			break;
+		case Meat :
+			ftype = "Meat";
+			break;
+		case SeaFood :
+			ftype = "SeaFood";
+			break;
+		case Beberage:
+			ftype = "Beberage";
+			break;
+		case Spice:
+			ftype = "Spice";
+			break;
+		default :
+		}
+		
+		System.out.println("Type : " + ftype + "\n" +
+				           "Food :" + this.Food+ "\n" + 
+						   "number : " + this.number + "\n" +
+				           "Shelflife : " + this.Shelflife + "\n" +
+			 	           "Storage : " + this.Storage + "\n");
+	}
 }
