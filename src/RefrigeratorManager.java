@@ -144,6 +144,7 @@ public class RefrigeratorManager {
 		System.out.println("Registered Number of Food : " + refrigerators.size());
 		for(int i = 0; i < refrigerators.size(); i++) {
 			refrigerators.get(i).printinfo();
+			
 		}
 	}
 }
