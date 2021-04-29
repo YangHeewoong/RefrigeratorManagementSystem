@@ -9,7 +9,6 @@ public class Spice extends Refrigerator {  //Spice의 용량(단위 :ml, L)추가
 	public Spice(FoodType type) {
 		super(type);
 	}
-	
 	public void getUserInput(Scanner input) {
 		
 		System.out.print("Spice Name : "); 
