@@ -56,6 +56,5 @@ public class Meat extends Refrigerator { //Meat 갯수 대신 무게(단위 :g) 저장
 				           "Shelflife : " + this.Shelflife + "\n" +
 			 	           "Storage : " + this.Storage + "\n");
 		
-		
 	}
 }
