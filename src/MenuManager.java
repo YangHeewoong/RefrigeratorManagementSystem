@@ -39,10 +39,7 @@ public class MenuManager {
 				
 			case 5 :	
 			
-			}
-													
+			}									
 		}
 	}
-
-
 }

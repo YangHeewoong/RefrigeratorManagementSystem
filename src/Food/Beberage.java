@@ -10,6 +10,7 @@ public class Beberage extends Refrigerator { //음료의 용량(단위 :ml, L)추가
 		super(type);
 	}
 	
+	
 	public void getUserInput(Scanner input) {
 		
 		System.out.print("Beberage Name : "); 

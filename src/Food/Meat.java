@@ -24,8 +24,7 @@ public class Meat extends Refrigerator { //Meat 갯수 대신 무게(단위 :g) 저장
 		System.out.print("Storage Place : "); 
 		String Storage = input.next();
 		this.setStorage(Storage);		
-	}
-	
+	}	
 	
 	public void printinfo() {
 		String ftype = "none";

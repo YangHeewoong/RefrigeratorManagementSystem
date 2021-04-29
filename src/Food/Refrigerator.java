@@ -84,7 +84,7 @@ public class Refrigerator {
 	}
 	
 	public void setCapacity(String capacity) {
-		Capacity = capacity;
+		Capacity = capacity; 
 	}	
 	
 	public void getUserInput(Scanner input) {

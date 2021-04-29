@@ -60,7 +60,7 @@ public class RefrigeratorManager {
 			else if (type == 6) {
 				refrigerator = new Spice(FoodType.Spice);
 				refrigerator.getUserInput(input);
-				refrigerators.add(refrigerator);
+				refrigerators.add(refrigerator); 
 				break;
 			}
 			else {
