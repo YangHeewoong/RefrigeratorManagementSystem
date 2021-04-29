@@ -93,7 +93,6 @@ public class RefrigeratorManager {
 			System.out.println("Food has not been registered");
 			return;
 		}
-		
 	}
 	
 	public void editFood() {

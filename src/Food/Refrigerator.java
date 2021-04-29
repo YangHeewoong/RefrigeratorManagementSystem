@@ -136,5 +136,4 @@ public class Refrigerator {
 				           "Shelflife : " + this.Shelflife + "\n" +
 			 	           "Storage : " + this.Storage + "\n");
 	}	
-	
 }
