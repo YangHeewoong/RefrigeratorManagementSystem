@@ -2,13 +2,17 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import Food.Beberage;
+import Food.FoodInput;
 import Food.FoodType;
+import Food.Fruit;
 import Food.Meat;
 import Food.Refrigerator;
+import Food.SeaFood;
 import Food.Spice;
+import Food.Vegetable;
 
 public class RefrigeratorManager {
-	ArrayList<Refrigerator> refrigerators = new ArrayList<Refrigerator>();
+	ArrayList<FoodInput> refrigerators = new ArrayList<FoodInput>();
 	Scanner input; 
 	
 	RefrigeratorManager(Scanner input) {
@@ -17,7 +21,7 @@ public class RefrigeratorManager {
 	
 	public void addFood() {	
 		int type = 0;
-		Refrigerator refrigerator;
+		FoodInput foodinput;
 		while (type !=1 && type !=2 && type !=3 && type !=4 && type !=5 && type !=6) {			
 			System.out.print("\n 1. Fruit");
 			System.out.print("\n 2. Vegetable");
@@ -28,39 +32,39 @@ public class RefrigeratorManager {
 			System.out.print("\n Select num for FoodType between 1~6 : ");
 			type = input.nextInt();
 			if (type == 1) {
-				refrigerator = new Refrigerator(FoodType.Fruit);
-				refrigerator.getUserInput(input);
-				refrigerators.add(refrigerator);
+				foodinput = new Fruit (FoodType.Fruit);
+				foodinput.getUserInput(input);
+				refrigerators.add(foodinput);
 				break;
 			}
 			else if (type == 2) {
-				refrigerator = new Refrigerator(FoodType.Vegetable);
-				refrigerator.getUserInput(input);
-				refrigerators.add(refrigerator);
+				foodinput = new Vegetable (FoodType.Vegetable);
+				foodinput.getUserInput(input);
+				refrigerators.add(foodinput);
 				break;
 			}
 			else if (type == 3) {
-				refrigerator = new Meat(FoodType.Meat);
-				refrigerator.getUserInput(input);
-				refrigerators.add(refrigerator);
+				foodinput = new Meat(FoodType.Meat);
+				foodinput.getUserInput(input);
+				refrigerators.add(foodinput);
 				break;
 			}
 			else if (type == 4) {
-				refrigerator = new Refrigerator(FoodType.SeaFood);
-				refrigerator.getUserInput(input);
-				refrigerators.add(refrigerator);
+				foodinput = new SeaFood (FoodType.SeaFood);
+				foodinput.getUserInput(input);
+				refrigerators.add(foodinput);
 				break;
 			}
 			else if (type == 5) {
-				refrigerator = new Beberage(FoodType.Beberage);
-				refrigerator.getUserInput(input);
-				refrigerators.add(refrigerator);
+				foodinput = new Beberage(FoodType.Beberage);
+				foodinput.getUserInput(input);
+				refrigerators.add(foodinput);
 				break;
 			}
 			else if (type == 6) {
-				refrigerator = new Spice(FoodType.Spice);
-				refrigerator.getUserInput(input);
-				refrigerators.add(refrigerator); 
+				foodinput = new Spice(FoodType.Spice);
+				foodinput.getUserInput(input);
+				refrigerators.add(foodinput); 
 				break;
 			}
 			else {
@@ -99,8 +103,8 @@ public class RefrigeratorManager {
 		System.out.println("Input what you want to Edit");
 		String Edit_Food = input.next();	
 		for(int i = 0; i < refrigerators.size(); i++) {
-			Refrigerator refrigerator = refrigerators.get(i);
-			if(refrigerator.getFood().equals(Edit_Food)) {
+			FoodInput foodinput = refrigerators.get(i);
+			if(foodinput.getFood().equals(Edit_Food)) {
 				int num = 0;
 				while( num != 5) {
 					System.out.println("\n<Refrigerator Information Edit Menu>");
@@ -114,22 +118,22 @@ public class RefrigeratorManager {
 					if (num == 1) {
 						System.out.println("Type of Food : ");
 						String Food = input.next();
-						refrigerator.setFood(Food);
+						foodinput.setFood(Food);
 					}
 					else if (num == 2) {
 						System.out.println("Number of Food : ");
 						int number = input.nextInt();
-						refrigerator.setNumber(number);
+						foodinput.setNumber(number);
 					}
 					else if (num == 3) {
 						System.out.println("Shelf life : ");
 						String shelflife = input.next();
-						refrigerator.setShelflife(shelflife);
+						foodinput.setShelflife(shelflife);
 					}
 					else if (num == 4) {
 						System.out.println("Storage Place : ");
 						String Storage = input.next();
-						refrigerator.setStorage(Storage);
+						foodinput.setStorage(Storage);
 					}
 					else {
 						continue;

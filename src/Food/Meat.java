@@ -2,7 +2,7 @@ package Food;
 
 import java.util.Scanner;
 
-public class Meat extends Refrigerator { //Meat 갯수 대신 무게(단위 :g) 저장
+public class Meat extends Refrigerator implements FoodInput { //Meat 갯수 대신 무게(단위 :g) 저장
 	
 	public Meat(FoodType type) {
 		super(type);

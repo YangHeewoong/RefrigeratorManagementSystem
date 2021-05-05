@@ -2,27 +2,20 @@ package Food;
 
 import java.util.Scanner;
 
-public class Beberage extends Refrigerator implements FoodInput { //음료의 용량(단위 :ml, L)추가
-	
-	protected String capacity;
-	
-	public Beberage(FoodType type) {
+public class Vegetable extends Refrigerator implements FoodInput {
+
+	public Vegetable (FoodType type) {
 		super(type);
 	}
 	
 	public void getUserInput(Scanner input) {
-		
-		System.out.print("Beberage Name : "); 
+		System.out.print("Food Name : "); 
 		String Food = input.next();
 		this.setFood(Food);
 		
-		System.out.print("Number of Beverage : ");
+		System.out.print("Number of Food : ");
 		int number = input.nextInt();
 		this.setNumber(number);
-		
-		System.out.print("Capacity : ");
-		String Capacity = input.next();
-		this.setCapacity(Capacity);
 		
 		System.out.print("Shelf life : ");
 		String Shelflife = input.next();
@@ -30,7 +23,7 @@ public class Beberage extends Refrigerator implements FoodInput { //음료의 용량(
 		
 		System.out.print("Storage Place : "); 
 		String Storage = input.next();
-		this.setStorage(Storage);		
+		this.setStorage(Storage);
 		
 	}
 	
@@ -61,8 +54,8 @@ public class Beberage extends Refrigerator implements FoodInput { //음료의 용량(
 		System.out.println("Type : " + ftype + "\n" +
 				           "Food :" + this.Food+ "\n" + 
 						   "number : " + this.number + "\n" +
-				           "Capacity : " + this.Capacity + "\n" +
-						   "Shelflife : " + this.Shelflife + "\n" +
+				           "Shelflife : " + this.Shelflife + "\n" +
 			 	           "Storage : " + this.Storage + "\n");
-	}
+		
+	}	
 }

@@ -2,7 +2,7 @@ package Food;
 
 import java.util.Scanner;
 
-public class Spice extends Refrigerator {  //Spice의 용량(단위 :ml, L)추가
+public class Spice extends Refrigerator implements FoodInput {  //Spice의 용량(단위 :ml, L)추가
     
 	protected String capacity;
 	
