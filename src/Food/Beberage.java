@@ -2,7 +2,7 @@ package Food;
 
 import java.util.Scanner;
 
-public class Beberage extends Refrigerator implements FoodInput { //음료의 용량(단위 :ml, L)추가
+public class Beberage extends Refrigerator { //음료의 용량(단위 :ml, L)추가
 	
 	protected String capacity;
 	
@@ -10,54 +10,20 @@ public class Beberage extends Refrigerator implements FoodInput { //음료의 용량(
 		super(type);
 	}
 	
-	public void getUserInput(Scanner input) {
+	public void getUserInput(Scanner input) {	
+		setFoodName(input);
 		
-		System.out.print("Beberage Name : "); 
-		String Food = input.next();
-		this.setFood(Food);
+		setFoodNumber(input);
 		
-		System.out.print("Number of Beverage : ");
-		int number = input.nextInt();
-		this.setNumber(number);
+		setCapacity(input);
 		
-		System.out.print("Capacity : ");
-		String Capacity = input.next();
-		this.setCapacity(Capacity);
+		setFoodShelfLife(input);
 		
-		System.out.print("Shelf life : ");
-		String Shelflife = input.next();
-		this.setShelflife(Shelflife);
-		
-		System.out.print("Storage Place : "); 
-		String Storage = input.next();
-		this.setStorage(Storage);		
-		
+		setFoodStorage(input);				
 	}
 	
 	public void printinfo() {
-		String ftype = "none";
-		switch (this.type) {
-		case Fruit :
-			ftype = "Fruit";
-			break;
-		case Vegetable :
-			ftype = "Vegetable";
-			break;
-		case Meat :
-			ftype = "Meat";
-			break;
-		case SeaFood :
-			ftype = "SeaFood";
-			break;
-		case Beberage:
-			ftype = "Beberage";
-			break;
-		case Spice:
-			ftype = "Spice";
-			break;
-		default :
-		}
-		
+		String ftype = getTypeFood();	
 		System.out.println("Type : " + ftype + "\n" +
 				           "Food :" + this.Food+ "\n" + 
 						   "number : " + this.number + "\n" +

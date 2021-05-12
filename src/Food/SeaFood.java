@@ -2,55 +2,24 @@ package Food;
 
 import java.util.Scanner;
 
-public class SeaFood extends Refrigerator implements FoodInput {
+public class SeaFood extends Refrigerator {
 
 	public SeaFood (FoodType type) {
 		super(type);
 	}
 	
-	public void getUserInput(Scanner input) {
-		System.out.print("Food Name : "); 
-		String Food = input.next();
-		this.setFood(Food);
+	public void getUserInput(Scanner input) {		
+		setFoodName(input);
 		
-		System.out.print("Number of Food : ");
-		int number = input.nextInt();
-		this.setNumber(number);
+		setFoodNumber(input);
 		
-		System.out.print("Shelf life : ");
-		String Shelflife = input.next();
-		this.setShelflife(Shelflife);
+		setFoodShelfLife(input);
 		
-		System.out.print("Storage Place : "); 
-		String Storage = input.next();
-		this.setStorage(Storage);
-		
+		setFoodStorage(input);
 	}
 	
 	public void printinfo() {
-		String ftype = "none";
-		switch (this.type) {
-		case Fruit :
-			ftype = "Fruit";
-			break;
-		case Vegetable :
-			ftype = "Vegetable";
-			break;
-		case Meat :
-			ftype = "Meat";
-			break;
-		case SeaFood :
-			ftype = "SeaFood";
-			break;
-		case Beberage:
-			ftype = "Beberage";
-			break;
-		case Spice:
-			ftype = "Spice";
-			break;
-		default :
-		}
-		
+		String ftype = getTypeFood();
 		System.out.println("Type : " + ftype + "\n" +
 				           "Food :" + this.Food+ "\n" + 
 						   "number : " + this.number + "\n" +
