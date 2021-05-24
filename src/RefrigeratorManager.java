@@ -1,3 +1,4 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -7,14 +8,18 @@ import Food.FoodInput;
 import Food.FoodType;
 import Food.Fruit;
 import Food.Meat;
-import Food.Refrigerator;
 import Food.SeaFood;
 import Food.Spice;
 import Food.Vegetable;
 
-public class RefrigeratorManager {
+public class RefrigeratorManager implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7285213900182629452L;
+	
 	ArrayList<FoodInput> refrigerators = new ArrayList<FoodInput>();
-	Scanner input; 
+	transient Scanner input; 
 	
 	RefrigeratorManager(Scanner input) {
 		this.input = input;

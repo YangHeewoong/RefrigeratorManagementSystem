@@ -1,10 +1,15 @@
 package Food;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 import exception.FoodShelflifeException;
 
-public abstract class Refrigerator implements FoodInput { //Refrigerator의 객체를 생성하지 않음
+public abstract class Refrigerator implements FoodInput, Serializable { //Refrigerator의 객체를 생성하지 않음
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8172480738290471482L;
 	
 	protected FoodType type = FoodType.Fruit;
 	protected String Food;
