@@ -1,2 +1,4 @@
-5월 22, 2021 8:56:47 오후 log.EventLogger log
+5월 24, 2021 3:49:16 오후 log.EventLogger log
+INFO: Add a food
+5월 24, 2021 3:49:24 오후 log.EventLogger log
 INFO: View a list of food
