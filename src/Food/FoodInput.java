@@ -10,11 +10,19 @@ public interface FoodInput {
 	
 	public void setFood(String food);
 	
+	public int getNumber();
+	
 	public void setNumber(int number);
+	
+	public String getShelflife();
 	
 	public void setShelflife(String shelflife) throws FoodShelflifeException; 
 	
+	public String getStorage();
+	
 	public void setStorage(String storage);
+	
+	public String getCapacity();
 	
 	public void setCapacity(String capacity);
 	

@@ -1,3 +1,4 @@
+package manager;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -8,6 +9,7 @@ import Food.FoodInput;
 import Food.FoodType;
 import Food.Fruit;
 import Food.Meat;
+import Food.Refrigerator;
 import Food.SeaFood;
 import Food.Spice;
 import Food.Vegetable;
@@ -165,9 +167,15 @@ public class RefrigeratorManager implements Serializable {
 		for(int i = 0; i < refrigerators.size(); i++) {
 			refrigerators.get(i).printinfo();			
 		}
-	
 	}
 
+	public int size() {
+		return refrigerators.size();
+	}
+	
+	public FoodInput get(int index) {
+		return (Refrigerator) refrigerators.get(index);
+	}
 	
 	public void showEditMenu() {
 		System.out.println("\n<Refrigerator Information Edit Menu>");
@@ -178,4 +186,5 @@ public class RefrigeratorManager implements Serializable {
 		System.out.println("5. Exit");
 		System.out.println("Select one number between 1-5");
 	}
+
 }
