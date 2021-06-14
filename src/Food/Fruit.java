@@ -8,13 +8,10 @@ public class Fruit extends Refrigerator {
 		super(type);
 	}
 	
-	public void getUserInput(Scanner input) {
-		setFoodName(input);
-		
-		setFoodNumber(input);
-		
-		setFoodShelfLife(input);
-		
+	public void getUserInput(Scanner input) {	
+		setFoodName(input);		
+		setFoodNumber(input);		
+		setFoodShelfLife(input);		
 		setFoodStorage(input);
 	}
 	

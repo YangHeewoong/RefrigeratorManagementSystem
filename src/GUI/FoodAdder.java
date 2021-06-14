@@ -7,12 +7,18 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 
+import listener.FoodAdderCancelListener;
+import listener.FoodAdderListener;
+import manager.RefrigeratorManager;
+
 public class FoodAdder extends JPanel {
 
-	WindowFrame frame;
+	WindowFrame frame;	
+	RefrigeratorManager refrigeratormanager;
 	
-	public FoodAdder(WindowFrame frame) {
+	public FoodAdder(WindowFrame frame, RefrigeratorManager refrigeratormanager) {
 		this.frame = frame;
+		this.refrigeratormanager = refrigeratormanager;
 		
 		JPanel panel = new JPanel(new SpringLayout());
 		panel.setLayout(new SpringLayout()); 
@@ -44,11 +50,18 @@ public class FoodAdder extends JPanel {
 		JLabel labelCapacity = new JLabel("Capacity : ", JLabel.TRAILING);
 		JTextField fieldCapacity = new JTextField(10);
 		labelCapacity.setLabelFor(fieldCapacity);
+		
+		JButton saveButton = new JButton("save");
+		saveButton.addActionListener(new FoodAdderListener(fieldName, fieldNumber, fieldShelflife, fieldStorage, fieldCapacity, refrigeratormanager));
+		
+		JButton cancelButton = new JButton("cancle");
+		cancelButton.addActionListener(new FoodAdderCancelListener(frame));
+		
 		panel.add(labelCapacity);
 		panel.add(fieldCapacity);
 		
-		panel.add(new JButton("save"));
-		panel.add(new JButton("cancel"));
+		panel.add(saveButton);
+		panel.add(cancelButton);
 		
 		SpringUtilities.makeCompactGrid(panel, 6, 2, 6, 6, 6, 6);
 

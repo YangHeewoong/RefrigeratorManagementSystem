@@ -17,7 +17,39 @@ public class FoodViewer extends JPanel {
 	
 	RefrigeratorManager refrigeratormanager;
 	
-	public FoodViewer(WindowFrame frame,RefrigeratorManager refrigeratormanager) {		
+	public RefrigeratorManager getRefrigeratormanager() {
+		return refrigeratormanager;
+	}
+	
+	public void setRefrigeratormanager(RefrigeratorManager refrigeratormanager) {
+		this.refrigeratormanager = refrigeratormanager;
+		this.removeAll();
+		
+		DefaultTableModel model = new DefaultTableModel();
+		model.addColumn("Food Name");
+		model.addColumn("Food Number");
+		model.addColumn("Shelf life");
+		model.addColumn("Storage Place");
+		model.addColumn("Capacity");
+		
+		for(int i=0; i < refrigeratormanager.size(); i++) {
+			Vector row = new Vector();
+			FoodInput fi = refrigeratormanager.get(i);
+			row.add(fi.getFood());
+			row.add(fi.getNumber());
+			row.add(fi.getShelflife());
+			row.add(fi.getStorage());
+			row.add(fi.getCapacity());
+			model.addRow(row);
+		}		
+		
+		JTable table = new JTable(model);
+		JScrollPane sp = new JScrollPane(table);
+		
+		this.add(sp);	
+	}
+
+	public FoodViewer(WindowFrame frame, RefrigeratorManager refrigeratormanager) {		
 		this.frame = frame;
 		this.refrigeratormanager = refrigeratormanager;
 		
@@ -40,11 +72,10 @@ public class FoodViewer extends JPanel {
 			row.add(fi.getCapacity());
 			model.addRow(row);
 		}
-		
-		
+			
 		JTable table = new JTable(model);
 		JScrollPane sp = new JScrollPane(table);
 		
-		this.add(sp);	
+		this.add(sp);
 	}
 }

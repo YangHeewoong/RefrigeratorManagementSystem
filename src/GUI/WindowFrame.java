@@ -17,9 +17,9 @@ public class WindowFrame extends JFrame{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		this.refrigeratormanager = refrigeratormanager;
-		menuselection = new MenuSelection(this);
-		foodadder =new FoodAdder(this);
-		foodviewer =new FoodViewer(this, this.refrigeratormanager);
+		this.menuselection = new MenuSelection(this);
+		this.foodadder =new FoodAdder(this, this.refrigeratormanager);
+		this.foodviewer =new FoodViewer(this, this.refrigeratormanager);
 		
 		
 		

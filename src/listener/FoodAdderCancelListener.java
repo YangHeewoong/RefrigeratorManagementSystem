@@ -8,11 +8,11 @@ import GUI.FoodAdder;
 import GUI.FoodViewer;
 import GUI.WindowFrame;
 
-public class ButtonAddListener implements ActionListener {
+public class FoodAdderCancelListener implements ActionListener {
 
 	WindowFrame frame;
 	
-	public ButtonAddListener(WindowFrame frame) {
+	public FoodAdderCancelListener(WindowFrame frame) {
 		this.frame = frame;
 	}
 
@@ -21,9 +21,9 @@ public class ButtonAddListener implements ActionListener {
 //		JButton b = (JButton) e.getSource();
 //		FoodAdder adder = frame.getFoodadder();
 //		frame.setupPanel(adder);
-//		
+		
 		frame.getContentPane().removeAll(); 
-		frame.getContentPane().add(frame.getFoodadder());
+		frame.getContentPane().add(frame.getMenuselection());
 		frame.revalidate();
 		frame.repaint();
 	}

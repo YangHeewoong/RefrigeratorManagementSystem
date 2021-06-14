@@ -84,8 +84,6 @@ public class MenuManager {
 	public static RefrigeratorManager getObject (String filename) {
 		RefrigeratorManager refrigeratormanager = null;
 		
-		
-		
 		try {
 			FileInputStream file = new FileInputStream(filename);
 			ObjectInputStream in = new ObjectInputStream(file);

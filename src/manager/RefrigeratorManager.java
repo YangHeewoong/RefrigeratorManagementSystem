@@ -23,9 +23,24 @@ public class RefrigeratorManager implements Serializable {
 	ArrayList<FoodInput> refrigerators = new ArrayList<FoodInput>();
 	transient Scanner input; 
 	
+	RefrigeratorManager() {
+		
+	}
+	
 	RefrigeratorManager(Scanner input) {
 		this.input = input;
 	}
+	
+	public void addFood(String name, int number, String shelflife, String storage, String capacity ) {
+		FoodInput foodinput = new Fruit (FoodType.Fruit);
+		foodinput.getUserInput(input);
+		refrigerators.add(foodinput);
+	}
+	
+	public void addFood(FoodInput foodinput) {
+		refrigerators.add(foodinput);
+	}
+	
 	
 	public void addFood() {	
 		int type = 0;
